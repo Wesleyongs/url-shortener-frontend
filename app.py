@@ -19,12 +19,13 @@ if input_url:
     if x.status_code==200:
         st.success(x.json()['output_url'])
     else:
-        st.danger(x.text)
+        st.exception(x.text)
     
 st.header("Request history")
 x = requests.get(url)
 df = pd.DataFrame(data=x.json())
-st.table(df)
+if not df.empty:
+    st.table(df)
 
 st.header("Delete everything")
 delete_all = st.button("Delete all history")
@@ -33,4 +34,4 @@ if delete_all:
     if x.status_code==200:
         st.success("Done")
     else:
-        st.danger(x.text)
+        st.exception(x.text)
