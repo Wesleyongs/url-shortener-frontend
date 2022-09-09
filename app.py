@@ -6,6 +6,21 @@ url = 'http://ec2-13-212-176-7.ap-southeast-1.compute.amazonaws.com/UrlConversio
 long_urls = ["www.mysite.com/marketing/going-live/how-to-tell-the-world-about-your-new-business"]
 st.set_page_config(page_title="Govtech url shortener", page_icon ="favicon.png")
 
+st.write(
+        """
+    # Govtech url shortener
+    This simple app takes in the the url and output a shorter version using [pyshorteners](https://pypi.org/project/pyshorteners/):
+    
+    Features:
+    > 1. Stores every request in a db
+    > 2. If requested url exisits in db, will return the entry from db
+    > 3. Delete all history from db
+    > 4. Use on any device! This app is web responsive
+    
+    Created by [Wesley Ong](https://wesleyongs.com/).
+    """
+    )
+
 st.header("Make new request")
 with st.expander("Some test cases", expanded=False):
     st.markdown(f"""- {str(long_urls[0])}
