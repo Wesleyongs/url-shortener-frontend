@@ -9,7 +9,7 @@ st.header("Make new request")
 with st.expander("Some test cases", expanded=False):
     st.markdown(f"""- {str(long_urls[0])}
                 """)
-input_url = st.text_input("Input long url here", placeholder=long_urls[0])
+input_url = st.text_input("Input long url here", placeholder=long_urls[0], help="If url exists in db, duplicate entry will not be created, the existing result will instead be returned")
 
 
 if input_url:
