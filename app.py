@@ -4,6 +4,7 @@ import pandas as pd
 
 url = 'http://ec2-13-212-176-7.ap-southeast-1.compute.amazonaws.com/UrlConversion/UrlConversion/'
 long_urls = ["www.mysite.com/marketing/going-live/how-to-tell-the-world-about-your-new-business"]
+st.set_page_config(layout="wide", page_title="Govtech url shortener", page_icon ="favicon.png")
 
 st.header("Make new request")
 with st.expander("Some test cases", expanded=False):
