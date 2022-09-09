@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import pandas as pd
 
-url = 'http://ec2-13-212-176-7.ap-southeast-1.compute.amazonaws.com/UrlConversion/'
+url = 'http://ec2-13-212-176-7.ap-southeast-1.compute.amazonaws.com/UrlConversion/UrlConversion/'
 long_urls = ["www.mysite.com/marketing/going-live/how-to-tell-the-world-about-your-new-business"]
 
 st.header("Make new request")
