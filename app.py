@@ -29,8 +29,8 @@ st.write(
 
 st.header("Make new request")
 with st.expander("Some test cases", expanded=False):
-    st.markdown(
-        f"""- {str(long_urls[0])}
+    st.write(
+        f"""- {" - ".join(long_urls)}
                 """
     )
 input_url = st.text_input(
